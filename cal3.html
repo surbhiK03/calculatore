@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+   
+    function calculate(){
+       var one = parseInt(document.getElementById('first').value);
+       var two = parseInt(document.getElementById('second').value);
+       var resu = document.getElementById('result')
+
+       var add = document.getElementById('addi').value
+       var sub = document.getElementById('sub').value
+       var mul = document.getElementById('mul').value
+       var div = document.getElementById('div').value
+
+       
+       var operator = document.getElementById('changevalue').value
+
+      //test
+
+        switch(operator){
+          case '1':
+           c = one+two
+           break;
+
+           case '2':
+           c = one-two
+           break;
+
+           case '3':
+           c = one*two 
+           break;
+
+           case '4':
+           c = one/two
+           break;
+       }
+      
+
+      
+       
+       resu.innerText = c
+       preventDefault() 
+      
+    
+    }
+</script>
+<body>
+       
+        <input type="text" placeholder="enter the first digit" id="first" required/><br/><br/>
+        <input type="text" placeholder="enter the second digit" id="second" required/><br/><br/>
+        <div>Result:<span id="result">0</span></div><br/>
+        <select id="changevalue">
+            <option id="addi" value="1">Addision</option>
+            <option id="sub" value="2">Subcribtion</option>
+            <option id="mul" value="3">Multiply</option>
+            <option id="div" value="4">Division</option>
+        </select>
+
+        <button onclick="calculate()">Calculate</button>
+    
+    
+</body>
+</html>
